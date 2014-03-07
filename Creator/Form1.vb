@@ -12,7 +12,7 @@
     Dim marksmain As Double
     Dim aglmain As Double
     Dim intelmain As Double
-    
+
 
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -28,23 +28,9 @@
 
     End Sub
 
-    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
-        If ComboBox1.SelectedIndex = 0 Then PictureBox3.Image = PictureBox1.Image
-        If ComboBox1.SelectedIndex = 1 Then PictureBox3.Image = PictureBox2.Image
-        If ComboBox1.SelectedIndex = 2 Then PictureBox3.Image = PictureBox4.Image
-        If ComboBox1.SelectedIndex = 3 Then PictureBox3.Image = PictureBox5.Image
-        If ComboBox1.SelectedIndex = 4 Then PictureBox3.Image = PictureBox6.Image
-        If ComboBox1.SelectedIndex = 0 Then Label12.Text = 1
-        If ComboBox1.SelectedIndex = 1 Then Label12.Text = 2
-        If ComboBox1.SelectedIndex = 2 Then Label12.Text = 3
-        If ComboBox1.SelectedIndex = 3 Then Label12.Text = 4
-        If ComboBox1.SelectedIndex = 4 Then Label12.Text = 5
-    End Sub
-
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
@@ -59,8 +45,8 @@
 
     Private Sub Button4_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
         'This creates 2 random numbers and divides them by them self’s and rounded down and put in a label and 10 is added so then maximum is 22 and the minimum is 11
-        strong = Int(13 * Rnd() + 1)
-        strong2 = Int(5 * Rnd() + 1)
+        strong = CInt(Int((15 * Rnd()) + 1))
+        strong2 = CInt(Int((5 * Rnd()) + 1))
         strongmain = Math.Floor(Val(strong) / Val(strong2))
         Label10.Text = Val(strongmain) + 10
         Button4.Enabled = False
@@ -68,8 +54,8 @@
     End Sub
 
     Private Sub Button5_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
-        intel = Int(13 * Rnd() + 1)
-        intel2 = Int(5 * Rnd() + 1)
+        intel = CInt(Int((15 * Rnd()) + 1))
+        intel2 = CInt(Int((5 * Rnd()) + 1))
         intelmain = Math.Floor(Val(intel) / Val(intel2))
         Label7.Text = Val(intelmain) + 10
         Button5.Enabled = False
@@ -77,21 +63,21 @@
     End Sub
 
     Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-        marks = Int(13 * Rnd() + 1)
-        marks2 = Int(5 * Rnd() + 1)
+        marks = CInt(Int((15 * Rnd()) + 1))
+        marks2 = CInt(Int((5 * Rnd()) + 1))
         marksmain = Math.Floor(Val(marks) / Val(marks2))
         Label8.Text = Val(marksmain) + 10
         Button6.Enabled = False
     End Sub
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
-        agl = Int(13 * Rnd() + 1)
-        agl2 = Int(5 * Rnd() + 1)
+        agl = CInt(Int((15 * Rnd()) + 1))
+        agl2 = CInt(Int((5 * Rnd()) + 1))
         aglmain = Math.Floor(Val(agl) / Val(agl2))
         Label11.Text = Val(aglmain) + 10
         Button7.Enabled = False
     End Sub
-   
+
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
 
@@ -101,7 +87,7 @@
 
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Me.Hide()
-        Form2.Show()
+        Form3.Show()
     End Sub
 
     Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -144,11 +130,7 @@
     End Sub
 
     Private Sub Button3_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        
-    End Sub
 
-    Private Sub ComboBox2_SelectedIndexChanged_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox2.SelectedIndexChanged
-        
     End Sub
 
     Private Sub ComboBox3_SelectedIndexChanged_0(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -278,7 +260,6 @@
             myarray(2) = Label7.Text
             myarray(3) = Label8.Text
             myarray(4) = Label11.Text
-            myarray(5) = Label12.Text
             MsgBox("Saved")
             Dim FileName As String = Application.StartupPath & "\Save1.txt"
             IO.File.WriteAllLines(FileName, myarray)
@@ -290,12 +271,15 @@
             myarray(8) = Label7.Text
             myarray(9) = Label8.Text
             myarray(10) = Label11.Text
-            myarray(11) = Label12.Text
             MsgBox("Saved")
             Dim FileName As String = Application.StartupPath & "\Save2.txt"
             IO.File.WriteAllLines(FileName, myarray)
         End If
 
-        
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Randomize()
     End Sub
 End Class
