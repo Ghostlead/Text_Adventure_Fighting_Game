@@ -174,24 +174,8 @@
         'If ProgressBar2.Value <= 0 Then MsgBox("player 1 Wins")
     End Sub
 
-    Private Sub Button15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button15.Click
-        ProgressBar1.Maximum = 100
-        ProgressBar2.Maximum = 100
-        temp = 0
-        health = 50
-        enemyhealth = 50
-        'this is my battle button it see which number is bigger then the temp number is taken away from the enemy health
+    Private Sub Button15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        temp = Math.Floor(Val(TextBox1.Text - TextBox2.Text))
-        temp2 = Math.Floor(Val(Label2.Text - Label4.Text))
-        If TextBox1.Text > TextBox2.Text Then health = health - temp
-        If TextBox1.Text < TextBox2.Text Then enemyhealth = enemyhealth - temp
-        If Label2.Text > Label4.Text Then stamia = stamia - temp2
-        If Label2.Text < Label4.Text Then enemystamia = enemystamia - temp2
-        If enemyhealth > 100 Then enemyhealth = 100
-        If health > 100 Then health = 100
-        If enemystamia > 100 Then enemystamia = 100
-        If stamia > 100 Then stamia = 100
         If health <= 0 Then MsgBox("player 2 wins")
         If enemyhealth <= 0 Then MsgBox("player 1 wins")
         ProgressBar1.Value = health
@@ -212,7 +196,7 @@
         If ComboBox2.SelectedIndex = 0 Then Label4.Text = TextBox3.Text
     End Sub
 
-    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs)
         'temp = Math.Floor(Val(TextBox1.Text - TextBox2.Text))
         'temp2 = Math.Floor(Val(Label2.Text - Label4.Text))
         'If TextBox1.Text > TextBox2.Text Then health = health - temp
@@ -239,11 +223,40 @@
     End Sub
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
+        ProgressBar1.Maximum = 100
+        ProgressBar2.Maximum = 100
+        temp = 0
+        health = 50
+        enemyhealth = 50
+        'this is my battle button it see which number is bigger then the temp number is taken away from the enemy health
+
+        temp = Math.Floor(Val(TextBox1.Text - TextBox2.Text))
+        temp2 = Math.Floor(Val(Label2.Text - Label4.Text))
+        If TextBox1.Text > TextBox2.Text Then health = health - temp
+        If TextBox1.Text < TextBox2.Text Then enemyhealth = enemyhealth - temp
+        If Label2.Text > Label4.Text Then stamia = stamia - temp2
+        If Label2.Text < Label4.Text Then enemystamia = enemystamia - temp2
+        If enemyhealth > 100 Then enemyhealth = 100
+        If health > 100 Then health = 100
+        If enemystamia > 100 Then enemystamia = 100
+        If stamia > 100 Then stamia = 100
+        If health <= 0 Then
+            MsgBox("You have died")
+            End
+        End If
+        If enemyhealth <= 0 Then
+            MsgBox("You have managed to kill the pirate hopefully no one heard you")
+            Me.Hide()
+            Form3.Show()
+        End If
         enemyhealth = enemyhealth - (enemystrth * 0.5)
         ProgressBar2.Value = Int(enemyhealth)
         MsgBox("You hit the Pirate and in turn he hits you")
         health = health - (strth * 0.5)
         ProgressBar1.Value = health
+        ProgressBar2.Value = enemyhealth
+        ProgressBar3.Value = stamia
+        ProgressBar4.Value = enemystamia
     End Sub
 
     Private Sub Button7_Click_1(sender As Object, e As EventArgs) Handles Button7.Click
@@ -251,6 +264,8 @@
     End Sub
 
     Private Sub Button8_Click_1(sender As Object, e As EventArgs) Handles Button8.Click
-        health = health + (Str())
+        health = health + (intel * 0.5)
+        MsgBox("You trip your enemy up giving you a little bit of time to recouperate")
+        ProgressBar1.Value = health
     End Sub
 End Class

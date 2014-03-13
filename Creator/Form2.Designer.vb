@@ -37,7 +37,6 @@ Partial Class Form2
         Me.Button5 = New System.Windows.Forms.Button()
         Me.ProgressBar3 = New System.Windows.Forms.ProgressBar()
         Me.ProgressBar4 = New System.Windows.Forms.ProgressBar()
-        Me.Button15 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -50,7 +49,6 @@ Partial Class Form2
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -177,15 +175,6 @@ Partial Class Form2
         Me.ProgressBar4.Size = New System.Drawing.Size(168, 23)
         Me.ProgressBar4.TabIndex = 40
         '
-        'Button15
-        '
-        Me.Button15.Location = New System.Drawing.Point(187, 63)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(75, 23)
-        Me.Button15.TabIndex = 41
-        Me.Button15.Text = "Roll attack"
-        Me.Button15.UseVisualStyleBackColor = True
-        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(187, 37)
@@ -296,20 +285,9 @@ Partial Class Form2
         Me.Button3.Text = "Change"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button4
-        '
-        Me.Button4.Enabled = False
-        Me.Button4.Location = New System.Drawing.Point(379, 63)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 55
-        Me.Button4.Text = "Roll attack"
-        Me.Button4.UseVisualStyleBackColor = True
-        Me.Button4.Visible = False
-        '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(187, 88)
+        Me.Button6.Location = New System.Drawing.Point(187, 63)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(75, 23)
         Me.Button6.TabIndex = 56
@@ -329,7 +307,7 @@ Partial Class Form2
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(187, 117)
+        Me.Button8.Location = New System.Drawing.Point(186, 92)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(75, 23)
         Me.Button8.TabIndex = 58
@@ -344,7 +322,6 @@ Partial Class Form2
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox4)
@@ -357,7 +334,6 @@ Partial Class Form2
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button15)
         Me.Controls.Add(Me.ProgressBar4)
         Me.Controls.Add(Me.ProgressBar3)
         Me.Controls.Add(Me.Button5)
@@ -394,7 +370,6 @@ Partial Class Form2
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents ProgressBar3 As System.Windows.Forms.ProgressBar
     Friend WithEvents ProgressBar4 As System.Windows.Forms.ProgressBar
-    Friend WithEvents Button15 As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -407,7 +382,6 @@ Partial Class Form2
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button

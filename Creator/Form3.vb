@@ -28,11 +28,16 @@
             RichTextBox1.Text = ("You wait on the beach for someone to come looking for you while waiting you have some food and drink. Hours pass, you have ran out of food and water again.")
             fightchance(Button3)
         End If
+        If fooddrink = False Then
+            MsgBox("You run out of food and drink. You can't find anymore so you starve")
+            End
+        End If
         fooddrink = False
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+        MsgBox("You get get caught in a lots of vines and can't escape")
+        End
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
