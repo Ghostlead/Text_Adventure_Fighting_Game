@@ -12,6 +12,7 @@
     Dim marksmain As Double
     Dim aglmain As Double
     Dim intelmain As Double
+    Public win As Integer
 
 
 

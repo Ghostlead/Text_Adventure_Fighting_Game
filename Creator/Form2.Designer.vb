@@ -35,8 +35,6 @@ Partial Class Form2
         Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button14 = New System.Windows.Forms.Button()
         Me.ProgressBar3 = New System.Windows.Forms.ProgressBar()
         Me.ProgressBar4 = New System.Windows.Forms.ProgressBar()
         Me.Button15 = New System.Windows.Forms.Button()
@@ -52,6 +50,10 @@ Partial Class Form2
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -79,7 +81,7 @@ Partial Class Form2
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(249, 111)
+        Me.Label1.Location = New System.Drawing.Point(248, 156)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(13, 13)
         Me.Label1.TabIndex = 5
@@ -88,7 +90,7 @@ Partial Class Form2
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(249, 98)
+        Me.Label2.Location = New System.Drawing.Point(248, 143)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(13, 13)
         Me.Label2.TabIndex = 6
@@ -97,7 +99,7 @@ Partial Class Form2
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(424, 98)
+        Me.Label3.Location = New System.Drawing.Point(423, 143)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(13, 13)
         Me.Label3.TabIndex = 9
@@ -106,7 +108,7 @@ Partial Class Form2
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(424, 111)
+        Me.Label4.Location = New System.Drawing.Point(423, 156)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(13, 13)
         Me.Label4.TabIndex = 10
@@ -123,7 +125,7 @@ Partial Class Form2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(283, 6)
+        Me.Button1.Location = New System.Drawing.Point(283, 63)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 14
@@ -161,24 +163,6 @@ Partial Class Form2
         Me.Button5.Text = "Roll"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'Button10
-        '
-        Me.Button10.Location = New System.Drawing.Point(283, 35)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(75, 23)
-        Me.Button10.TabIndex = 37
-        Me.Button10.Text = "auto combat"
-        Me.Button10.UseVisualStyleBackColor = True
-        '
-        'Button14
-        '
-        Me.Button14.Location = New System.Drawing.Point(379, 6)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(75, 23)
-        Me.Button14.TabIndex = 38
-        Me.Button14.Text = "Roll"
-        Me.Button14.UseVisualStyleBackColor = True
-        '
         'ProgressBar3
         '
         Me.ProgressBar3.Location = New System.Drawing.Point(12, 235)
@@ -195,7 +179,7 @@ Partial Class Form2
         '
         'Button15
         '
-        Me.Button15.Location = New System.Drawing.Point(283, 64)
+        Me.Button15.Location = New System.Drawing.Point(187, 63)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(75, 23)
         Me.Button15.TabIndex = 41
@@ -221,7 +205,7 @@ Partial Class Form2
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(187, 98)
+        Me.Label5.Location = New System.Drawing.Point(186, 143)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(47, 13)
         Me.Label5.TabIndex = 44
@@ -230,7 +214,7 @@ Partial Class Form2
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(371, 98)
+        Me.Label6.Location = New System.Drawing.Point(370, 143)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(47, 13)
         Me.Label6.TabIndex = 45
@@ -239,7 +223,7 @@ Partial Class Form2
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(187, 111)
+        Me.Label7.Location = New System.Drawing.Point(186, 156)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(39, 13)
         Me.Label7.TabIndex = 46
@@ -248,7 +232,7 @@ Partial Class Form2
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(371, 111)
+        Me.Label8.Location = New System.Drawing.Point(370, 156)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(39, 13)
         Me.Label8.TabIndex = 47
@@ -258,7 +242,7 @@ Partial Class Form2
         '
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"edit attributes", "strength", "stamia"})
-        Me.ComboBox2.Location = New System.Drawing.Point(374, 137)
+        Me.ComboBox2.Location = New System.Drawing.Point(372, 182)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(81, 21)
         Me.ComboBox2.TabIndex = 49
@@ -266,51 +250,101 @@ Partial Class Form2
         '
         'ComboBox1
         '
+        Me.ComboBox1.Enabled = False
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"edit attributes", "strength", "stamia"})
-        Me.ComboBox1.Location = New System.Drawing.Point(181, 137)
+        Me.ComboBox1.Location = New System.Drawing.Point(186, 182)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(81, 21)
         Me.ComboBox1.TabIndex = 50
         Me.ComboBox1.Text = "edit"
+        Me.ComboBox1.Visible = False
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(180, 164)
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Location = New System.Drawing.Point(186, 209)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(82, 20)
         Me.TextBox3.TabIndex = 51
+        Me.TextBox3.Visible = False
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(374, 164)
+        Me.TextBox4.Location = New System.Drawing.Point(372, 209)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(81, 20)
         Me.TextBox4.TabIndex = 52
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(187, 190)
+        Me.Button2.Enabled = False
+        Me.Button2.Location = New System.Drawing.Point(186, 235)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 53
         Me.Button2.Text = "Change"
         Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Visible = False
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(379, 190)
+        Me.Button3.Location = New System.Drawing.Point(378, 235)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 54
         Me.Button3.Text = "Change"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Button4
+        '
+        Me.Button4.Enabled = False
+        Me.Button4.Location = New System.Drawing.Point(379, 63)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 55
+        Me.Button4.Text = "Roll attack"
+        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.Visible = False
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(187, 88)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 56
+        Me.Button6.Text = "Basic attack"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(379, 93)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 23)
+        Me.Button7.TabIndex = 57
+        Me.Button7.TabStop = False
+        Me.Button7.Text = "Basic attack"
+        Me.Button7.UseVisualStyleBackColor = True
+        Me.Button7.Visible = False
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(187, 117)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(75, 23)
+        Me.Button8.TabIndex = 58
+        Me.Button8.Text = "Heal"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(640, 262)
+        Me.Controls.Add(Me.Button8)
+        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox4)
@@ -326,8 +360,6 @@ Partial Class Form2
         Me.Controls.Add(Me.Button15)
         Me.Controls.Add(Me.ProgressBar4)
         Me.Controls.Add(Me.ProgressBar3)
-        Me.Controls.Add(Me.Button14)
-        Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.ProgressBar2)
@@ -360,8 +392,6 @@ Partial Class Form2
     Friend WithEvents ProgressBar2 As System.Windows.Forms.ProgressBar
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Button10 As System.Windows.Forms.Button
-    Friend WithEvents Button14 As System.Windows.Forms.Button
     Friend WithEvents ProgressBar3 As System.Windows.Forms.ProgressBar
     Friend WithEvents ProgressBar4 As System.Windows.Forms.ProgressBar
     Friend WithEvents Button15 As System.Windows.Forms.Button
@@ -377,4 +407,8 @@ Partial Class Form2
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents Button8 As System.Windows.Forms.Button
 End Class

@@ -72,7 +72,7 @@ Partial Class Form3
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(398, 23)
         Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Sepaku"
+        Me.Button4.Text = "Look for supplies"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Form3
