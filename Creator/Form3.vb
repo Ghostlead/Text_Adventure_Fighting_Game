@@ -1,4 +1,5 @@
 ﻿Public Class Form3
+    Dim escape As Boolean
     Dim fooddrink As Boolean
     Public win As Integer
     Dim willfight As Boolean
@@ -20,8 +21,19 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        fightchance(Button1)
-        RichTextBox1.Text = "You walk up and down the beach looking for survivors"
+        If win = 0 Then
+            fightchance(Button1)
+            RichTextBox1.Text = "You walk up and down the beach looking for survivors"
+        End If
+        If win = 1 Then
+            RichTextBox1.Text = ("After looking for survivors you notice a light off in the distance it looks like a lighthouse. You start walking towards it then you fall into a trap set by pirates")
+            Button1.Text = ("Try to escape")
+            If escape = True Then
+                MsgBox("You have managed to break free")
+                RichTextBox1.Text = ("When you escaped you notice a ship and signal it. the boat docks at you escape the island")
+                End
+            End If
+        End If
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         If fooddrink = True Then
@@ -48,10 +60,6 @@
             fooddrink = True
         End If
         fightchance(Button4)
-        If win = 1 Then
-            RichTextBox1.Text = ("After looking for survivors you notice a light off in the distance it looks like a lighthouse. You start walking towards it then you fall into a trap set by pirates")
-        End If
-
     End Sub
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
